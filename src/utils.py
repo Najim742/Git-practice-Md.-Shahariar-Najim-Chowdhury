@@ -8,8 +8,10 @@ def multiply(a, b):
     return a * b
 
 def divide(a, b):
-    if b != 0:
+    try:
         return a / b
-    else:
+    except ZeroDivisionError:
         return "Error: Division by zero"
+    except Exception as e:
+        return f"Error: {e}"
 
